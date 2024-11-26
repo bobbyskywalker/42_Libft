@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:02:15 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/26 14:08:55 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:20:04 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_atoi(const char *nptr);
 //TODO:
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
