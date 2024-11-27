@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:36:04 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 12:18:35 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:12:22 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	int				i;
 	char			*d;
 	char			*s;
 
 	d = (char *)dest;
-	s = (const char *)src;
+	s = (char *)src;
 	if (s > d)
 	{
 		i = 0;

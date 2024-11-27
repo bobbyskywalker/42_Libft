@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 15:07:54 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 15:13:28 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:20:54 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 	int		len;
 
-	len = ft_strlen(s);
+	len = ft_strlen((char *)s);
 	d = (char *)malloc((len + 1) * sizeof(char));
 	if (!d)
 		return (NULL);

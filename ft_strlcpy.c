@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 12:19:08 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 12:38:12 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:12:51 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 		return (i);
 	}
-	while (i < (int)size - 1 && src[i])
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
