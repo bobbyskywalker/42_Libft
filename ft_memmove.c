@@ -6,12 +6,12 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:36:04 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/26 14:32:19 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/27 12:18:35 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TODO: to test PROPERLY :))
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
