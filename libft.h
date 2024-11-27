@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:02:15 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 13:53:13 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:13:51 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
-// TODO:
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 #endif

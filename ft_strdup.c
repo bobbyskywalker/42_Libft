@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 14:43:47 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 14:50:09 by agarbacz         ###   ########.fr       */
+/*   Created: 2024/11/27 15:07:54 by agarbacz          #+#    #+#             */
+/*   Updated: 2024/11/27 15:13:28 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	const unsigned char	*str1;
-	const unsigned char	*str2;
-	size_t				i;
+	char	*d;
+	int		i;
+	int		len;
 
-	if (n == 0)
-		return (0);
-	str1 = s1;
-	str2 = s2;
+	len = ft_strlen(s);
+	d = (char *)malloc((len + 1) * sizeof(char));
+	if (!d)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] < str2[i]);
+		d[i] = s[i];
+		i++;
 	}
-	return (0);
+	d[i] = '\0';
+	return (d);
 }
