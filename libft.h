@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:02:15 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 16:51:55 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:20:31 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 // SECTION: INCLUDES
 # include <stdlib.h>
 # include <string.h>
+# include <assert.h>
 
 // SECTION: PROTOTYPES
 int		ft_isalpha(int c);
