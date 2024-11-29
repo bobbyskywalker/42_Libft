@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 14:43:47 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 16:22:31 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:18:15 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (str1[i] != str2[i])
-			return (str1[i] < str2[i]);
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (0);

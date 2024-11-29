@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:36:04 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 16:12:22 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:03:58 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (s > d)
 	{
 		i = 0;
-		while (s[i] && i < (int)n)
+		while (i < (int)n)
 		{
 			d[i] = s[i];
 			i++;
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 	{
 		i = (int)n - 1;
-		while (d[i] && i >= 0)
+		while (i >= 0)
 		{
 			d[i] = s[i];
 			i--;
