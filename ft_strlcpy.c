@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 12:19:08 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/27 16:12:51 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:34:46 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(dst));
+	return (ft_strlen((char *)src));
 }
