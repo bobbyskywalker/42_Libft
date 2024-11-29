@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:27:08 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 16:28:37 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:42:31 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	*search(const char *big, const char *little, size_t len)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (!little[0])
+	if (!little[0] || big == little || len == 0)
 		return ((char *)big);
 	return (search(big, little, len));
 }
