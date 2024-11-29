@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:27:08 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 14:51:13 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:28:37 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ static char	*search(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (little == NULL || little[0] == '\0')
+	if (!little[0])
 		return ((char *)big);
 	return (search(big, little, len));
 }
@@ -51,10 +51,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // 	char haystack[30] = "aaabcabcd";
 // 	char needle[10] = "aabc";
 // 	char * empty = (char*)"";
-// 	assert(ft_strnstr(haystack, needle, -1) == haystack + 1);
-// 	assert(ft_strnstr(empty, "", -1) == empty);
-// 	assert(ft_strnstr(empty, "", 0) == empty);
-// 	assert(ft_strnstr(haystack, "aaabc", 5) == haystack);
-// 	assert(ft_strnstr(haystack, "abcd", 9) == haystack + 5);
+// 	// assert(ft_strnstr(haystack, needle, -1) == haystack + 1);
+// 	assert(strnstr(haystack, needle, -1) == haystack + 1);
+// 	// assert(ft_strnstr(empty, "", -1) == empty);
+// 	// assert(ft_strnstr(empty, "", 0) == empty);
+// 	// assert(ft_strnstr(haystack, "aaabc", 5) == haystack);
+// 	// assert(ft_strnstr(haystack, "abcd", 9) == haystack + 5);
 // 	return 0;
 // }

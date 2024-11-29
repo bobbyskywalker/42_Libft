@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 12:47:21 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 15:26:58 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:08:38 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (c == '\0')
 		return ((char *)(s + ft_strlen((char *)s)));
 	while (s[i])
