@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:02:15 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 14:20:31 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:00:26 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 // SECTION: PROTOTYPES
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
