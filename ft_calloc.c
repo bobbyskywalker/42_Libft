@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 14:52:11 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 15:17:47 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:28:50 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
-	int 	total;
+	int		total;
 
 	if (nmemb == 0 || size == 0)
 		total = 1;
