@@ -8,7 +8,7 @@ SOURCES = \
 
 OBJECTS = $(SOURCES:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -21,6 +21,10 @@ bonus: $(OBJECTS) $(BOBJECTS)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SOURCES)
+	gcc -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(OBJECTS) $(BOBJECTS)
