@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 14:52:11 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/12/03 18:19:29 by agarbacz         ###   ########.fr       */
+/*   Created: 2024/12/02 17:56:57 by agarbacz          #+#    #+#             */
+/*   Updated: 2024/12/02 18:56:32 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*p;
-	size_t	total;
+	char	*sub;
+	size_t	count;
 
-	if (!nmemb || !size)
-		return (malloc(0));
-	if (nmemb && (size * nmemb) / nmemb != size)
+	if (!s)
 		return (NULL);
-	total = nmemb * size;
-	p = (void *)malloc(total);
-	if (!p)
+	if (start >= (unsigned int) ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > (unsigned int)ft_strlen((s + start)))
+		len = (unsigned int)ft_strlen((s + start));
+	sub = (char *)malloc((len + 1) * sizeof(char));
+	if (!sub)
 		return (NULL);
-	ft_bzero(p, nmemb * size);
-	return (p);
+	count = 0;
+	while (count < len)
+	{
+		sub[count] = s[start + count];
+		count++;
+	}
+	sub[count] = '\0';
+	return (sub);
 }

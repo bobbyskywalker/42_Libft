@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 14:52:11 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/12/03 18:19:29 by agarbacz         ###   ########.fr       */
+/*   Created: 2024/12/03 15:43:31 by agarbacz          #+#    #+#             */
+/*   Updated: 2024/12/03 18:44:13 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*p;
-	size_t	total;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*result;
 
-	if (!nmemb || !size)
-		return (malloc(0));
-	if (nmemb && (size * nmemb) / nmemb != size)
+	if (!s1 || !s2)
 		return (NULL);
-	total = nmemb * size;
-	p = (void *)malloc(total);
-	if (!p)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	result = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
+	if (!result)
 		return (NULL);
-	ft_bzero(p, nmemb * size);
-	return (p);
+	ft_strlcpy(result, (char *)s1, s1_len + 1);
+	ft_strlcat(result, (char *)s2, s2_len + s1_len + 1);
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:02:15 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/11/29 16:03:06 by agarbacz         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:20:53 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define LIBFT_H
 
 // SECTION: INCLUDES
-# include <stdlib.h>
-# include <string.h>
 # include <assert.h>
 # include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
 
 // SECTION: PROTOTYPES
 int		ft_isalpha(int c);
@@ -43,4 +44,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 #endif
