@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 15:43:31 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/12/04 11:12:17 by agarbacz         ###   ########.fr       */
+/*   Created: 2024/12/04 15:53:40 by agarbacz          #+#    #+#             */
+/*   Updated: 2024/12/04 16:17:20 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	s1_len;
-	size_t	s2_len;
-	char	*result;
-
-	if (!s1 || !s2)
-		return (NULL);
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
-	if (!result)
-		return (NULL);
-	ft_strlcpy(result, (char *)s1, s1_len + 1);
-	ft_strlcat(result, (char *)s2, s2_len + s1_len + 1);
-	return (result);
+	if (!lst || !del)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }

@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 15:43:31 by agarbacz          #+#    #+#             */
-/*   Updated: 2024/12/04 11:12:17 by agarbacz         ###   ########.fr       */
+/*   Created: 2024/12/04 10:39:26 by agarbacz          #+#    #+#             */
+/*   Updated: 2024/12/04 11:10:41 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	s1_len;
-	size_t	s2_len;
-	char	*result;
+	char	*str;
+	size_t	i;
 
-	if (!s1 || !s2)
+	if (!s)
 		return (NULL);
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
-	if (!result)
+	str = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!str)
 		return (NULL);
-	ft_strlcpy(result, (char *)s1, s1_len + 1);
-	ft_strlcat(result, (char *)s2, s2_len + s1_len + 1);
-	return (result);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	return (str);
 }

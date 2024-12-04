@@ -5,9 +5,15 @@ SOURCES = \
 	ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
 	ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_atoi.c \
 	ft_calloc.c ft_strdup.c ft_strnstr.c ft_substr.c ft_strtrim.c \
-	ft_split.c ft_strjoin.c ft_itoa.c
+	ft_split.c ft_strjoin.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+
+BONUS_SOURCES = \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c
 
 OBJECTS = $(SOURCES:.c=.o)
+BOBJECTS = $(BONUS_SOURCES:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -23,10 +29,6 @@ bonus: $(OBJECTS) $(BOBJECTS)
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
-so:
-	$(CC) -fPIC $(CFLAGS) $(SOURCES)
-	gcc -shared -o libft.so $(OBJ)
-
 clean:
 	rm -f $(OBJECTS) $(BOBJECTS)
 
@@ -35,7 +37,7 @@ fclean: clean
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
-	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS) $(BOBJECTS)
 
 re: fclean all
 
