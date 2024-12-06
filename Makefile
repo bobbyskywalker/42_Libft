@@ -1,4 +1,7 @@
 NAME = libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
 SOURCES = \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -15,19 +18,13 @@ BONUS_SOURCES = \
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BONUS_SOURCES:.c=.o)
 
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(AR) -r $@ $?
+	ar rcs -o $(NAME) $(OBJECTS)
 
 bonus: $(OBJECTS) $(BOBJECTS)
-	$(AR) -r $(NAME) $?
-
-%.o: %.c
-	$(CC) -c $(CFLAGS) $?
+	ar rcs -o $(NAME) $(OBJECTS) $(BOBJECTS)
 
 clean:
 	rm -f $(OBJECTS) $(BOBJECTS)
@@ -35,10 +32,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
-	gcc -nostartfiles -shared -o libft.so $(OBJECTS) $(BOBJECTS)
-
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
