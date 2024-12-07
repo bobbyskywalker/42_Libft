@@ -51,7 +51,7 @@ bonus all clean fclean re
    ```c
     #include "libft.h"
     ```
-    2. Compile your code with the library (assuming the .a static library file and libft.h header are located in /libft dir in the root of your project)
+2. Compile your code with the library (assuming the .a static library file and libft.h header are located in /libft dir in the root of your project)
     ```bash
     gcc -Wall -Wextra -Werror your_program.c -I./libft -L./libft -lft -o your_program
     ```
@@ -66,3 +66,4 @@ bonus all clean fclean re
 ✨ **Feel free to submit a pull request if you want to contribute to this project!**  
 📢 **If you're a 42 student, use this as a guide at most. Don't cheat, learn! <3**  
 ### 📅 Created in December 2024 as part of 42's Common Core at 42 Warsaw
+
