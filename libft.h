@@ -20,6 +20,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 // SECTION: PROTOTYPES
 int					ft_isalpha(int c);
@@ -57,6 +59,15 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+
+// SECTION PRINTF:
+int					ft_print_hex(uintptr_t arg, int case_p);
+int					ft_print_int(int nb);
+int					ft_print_uint(unsigned int nb);
+int					ft_print_ptr(uintptr_t ptr);
+int					ft_print_str(char *str);
+int					ft_print_char(char c);
+int					ft_printf(const char *format, ...);
 
 // SECTION LINKED LISTS:
 typedef struct s_list
