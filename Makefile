@@ -10,7 +10,8 @@ SOURCES = \
 	ft_calloc.c ft_strdup.c ft_strnstr.c ft_substr.c ft_strtrim.c \
 	ft_split.c ft_strjoin.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-	ft_print_str.c ft_print_nums.c ft_print_hex.c ft_print_ptr.c ft_printf.c
+	ft_print_str.c ft_print_nums.c ft_print_hex.c ft_print_ptr.c ft_printf.c \
+	gnl/get_next_line.c gnl/get_next_line_utils.c
 
 BONUS_SOURCES = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
