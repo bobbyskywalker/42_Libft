@@ -69,6 +69,9 @@ int					ft_print_str(char *str);
 int					ft_print_char(char c);
 int					ft_printf(const char *format, ...);
 
+//SECTION: new
+void				ft_slc_sort(int *arr, int len);
+
 // SECTION LINKED LISTS:
 typedef struct s_list
 {
